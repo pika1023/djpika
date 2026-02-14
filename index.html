@@ -5,25 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DJ PIKA</title>
   <style>
-    :root{
-      --bg:#2D0c6d;
-      --text:#ffffff;
-      --muted:#aaaaaa;
-      --accent:#f6ce11;
-      --card: rgba(255,255,255,0.08);
-      --card2: rgba(255,255,255,0.06);
-      --stroke: rgba(255,255,255,0.14);
-      --shadow: 0 24px 70px rgba(0,0,0,.65);
-      --radius: 22px;
-      --radius-lg: 28px;
-      --max: 1120px;
+   :root{
+        /* Core */
+        --bg:#2D0C6D;
+        --text:#FFFFFF;
+        --muted:rgba(255,255,255,0.68);
+
+        /* Brand */
+        --accent:#F6CE11;
+        --accent-2:rgba(246,206,17,0.55);   /* soft accent for borders/glows */
+        --accent-3:rgba(246,206,17,0.18);   /* very soft accent for fills */
+
+        /* Surfaces (glass on dark purple) */
+        --card: rgba(255,255,255,0.09);
+        --card2: rgba(255,255,255,0.06);
+        --stroke: rgba(255,255,255,0.14);
+        --stroke-strong: rgba(255,255,255,0.20);
+
+        /* Shadows */
+        --shadow: 0 24px 70px rgba(0,0,0,0.55);
+
+        /* Radius + layout */
+        --radius: 22px;
+        --radius-lg: 28px;
+        --max: 1120px;
     }
 
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Roboto Condensed", sans-serif;
       background: var(--bg);
       color: var(--text);
       overflow-x:hidden;
