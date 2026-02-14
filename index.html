@@ -12,23 +12,22 @@
   <div class="noise" aria-hidden="true"></div>
 
   <div class="wrap">
-    <header>
-      <a href="index.html">
-        <div class="brand">
-          <!-- <span class="mark" aria-hidden="true"></span> -->
-          <img class="logo" src="assets/Logo Entwurf.png" alt="DJ Pika Logo">
-          <span>DJ PIKA</span>
-        </div>
-      </a>
+    <header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Zur Startseite">
+      <img class="logo" src="assets/Logo-Entwurf.png" alt="DJ Pika Logo">
+      <span class="brand-text">DJ PIKA</span>
+    </a>
 
-      <nav>
-        <a class="pill" href="#events">Events</a>
-        <a class="pill" href="#sound">Sound</a>
-        <a class="pill" href="#about">About</a>
-        <a class="pill" href="#contact">Kontakt</a>
-        <a class="btn primary" href="#contact">Jetzt anfragen</a>
-      </nav>
-    </header>
+    <nav class="nav">
+      <a class="nav-link" href="#events">Events</a>
+      <a class="nav-link" href="#sound">Sound</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#contact">Kontakt</a>
+      <a class="btn primary" href="#contact">Jetzt anfragen</a>
+    </nav>
+  </div>
+</header>
 
     <main class="hero" role="main">
       <div class="hero-inner">
@@ -178,5 +177,8 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+
+  <script src="scripts/sideHeader.js"></script>
+
 </body>
 </html>
