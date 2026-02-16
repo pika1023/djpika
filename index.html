@@ -58,16 +58,17 @@
             </div>
           </div>
 
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <!-- <div style="display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn primary" href="#contact">✨ Event anfragen</a>
             <a class="btn" href="#sound">🎧 Hör rein</a>
-          </div>
+          </div> -->
         </div>
 
         <div class="hero-right">
           <div class="hero-image" aria-label="DJ Pika Portrait"></div>
 
-          <!-- TEXT UNTERM BILD
+          <!-- TEXT UNTERM BILD -->
+          
           <div class="cta-card" id="contact">
             
             <div class="cta-copy">
@@ -79,7 +80,7 @@
             <div class="cta-actions">
               <a class="btn primary" href="mailto:hello@example.com?subject=Booking%20Anfrage%20DJ%20Pika">Kontakt</a>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </main>
@@ -110,6 +111,8 @@
         </article>
       </div>
     </section> -->
+
+<!-- SECTION GALLERY -->
 
     <section id="moments" class="moments-section">
       <div class="section-title">
@@ -151,11 +154,52 @@
   </div>
 </section>
 
-<section>
-  <div class="section-title">
+<!-- SECTION TESTIMONIALS -->
+
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonial-wrapper">
+
+    <div class="section-title">
         <h2 class="section-title-clean"><span class="accent-color">Stimmen</span>, die bleiben</h2>
       </div>
-    </section>
+
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="testimonialTrack">
+
+        <div class="testimonial-slide">
+          <blockquote>
+            „Thanks for the great music yesterday at Vaina Loca! It was amazing!“
+          </blockquote>
+          <div class="testimonial-author">
+            — Hamza, Vaina Loca, 2025
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <blockquote>
+            „Professionell, entspannt und mit unglaublichem Gespür für den Raum.“
+          </blockquote>
+          <div class="testimonial-author">
+            — Corporate Event, Mannheim
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <blockquote>
+            „Perfekte Mischung aus Energie und Gefühl. Unsere Gäste waren begeistert.“
+          </blockquote>
+          <div class="testimonial-author">
+            — Salsa Social, Heidelberg
+          </div>
+        </div>
+
+      </div>
+
+      <div class="testimonial-dots" id="testimonialDots"></div>
+
+    </div>
+  </div>
+</section>
 
 
     <section id="sound">
@@ -227,6 +271,9 @@
   </script>
 
   <script src="scripts/sideHeader.js"></script>
+  <script src="scripts/gallery.js"></script>
+  <script src="scripts/testimonials.js"></script>
+
 
 </body>
 </html>

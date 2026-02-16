@@ -614,3 +614,67 @@ footer{
   letter-spacing:.4px;
 }
 
+/* ----------- TESTIMONIALS -------- */
+
+.testimonials-section{
+  margin-top:120px;
+  padding:80px 0;
+}
+
+.testimonial-wrapper{
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.testimonial-slider{
+  position:relative;
+  overflow:hidden;
+  margin-top:60px;
+}
+
+.testimonial-track{
+  display:flex;
+  transition:transform .6s ease;
+}
+
+.testimonial-slide{
+  min-width:100%;
+  padding:0 20px;
+}
+
+.testimonial-slide blockquote{
+  font-size: clamp(22px, 3vw, 34px);
+  line-height:1.4;
+  font-weight:500;
+  letter-spacing:.2px;
+  margin:0;
+}
+
+.testimonial-author{
+  margin-top:30px;
+  font-size:14px;
+  color:var(--muted);
+  letter-spacing:.3px;
+}
+
+.testimonial-dots{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:40px;
+}
+
+.testimonial-dots button{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.4);
+  background:transparent;
+  cursor:pointer;
+}
+
+.testimonial-dots button.active{
+  background:var(--accent);
+  border-color:var(--accent);
+}
