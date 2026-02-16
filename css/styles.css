@@ -731,18 +731,24 @@ footer{
 
 /* UPCOMING EVENTS */
 
-.upcoming-section{ margin-top: 110px; text-align:center; }
+.upcoming-section{
+  margin-top: 110px;
+  text-align:center;
+}
+
 .upcoming-list{
   list-style:none;
   padding:0;
   margin: 26px auto 0;
-  max-width: 720px;
+  max-width: 760px;
   display:grid;
   gap: 12px;
 }
+
 .upcoming-list li{
   display:flex;
   justify-content:space-between;
+  align-items:baseline;
   gap:16px;
   padding: 14px 16px;
   border: 1px solid rgba(255,255,255,.12);
@@ -750,5 +756,13 @@ footer{
   background: rgba(0,0,0,.22);
   backdrop-filter: blur(10px);
 }
-.upcoming-where{ color: var(--muted); }
-.upcoming-loading{ justify-content:center; color: var(--muted); }
+
+.upcoming-where{
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.upcoming-loading{
+  justify-content:center;
+  color: var(--muted);
+}
