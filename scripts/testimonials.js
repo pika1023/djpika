@@ -1,39 +1,32 @@
 (function(){
   const track = document.getElementById("testimonialTrack");
   const dotsContainer = document.getElementById("testimonialDots");
+  if (!track || !dotsContainer) return;
 
-  if(!track) return;
+  const slides = Array.from(track.querySelectorAll(".testimonial-slide"));
+  if (slides.length === 0) return;
 
-  const slides = document.querySelectorAll(".testimonial-slide");
   let index = 0;
 
-  function updateSlider(){
+  function setActive(i){
+    index = i;
     track.style.transform = `translateX(-${index * 100}%)`;
 
-    dotsContainer.querySelectorAll("button").forEach((dot,i)=>{
-      dot.classList.toggle("active", i === index);
-    });
+    slides.forEach((s, si) => s.classList.toggle("is-active", si === index));
+    dotsContainer.querySelectorAll("button").forEach((d, di) =>
+      d.classList.toggle("active", di === index)
+    );
   }
 
-  function createDots(){
-    slides.forEach((_,i)=>{
-      const dot = document.createElement("button");
-      dot.addEventListener("click", ()=>{
-        index = i;
-        updateSlider();
-      });
-      dotsContainer.appendChild(dot);
-    });
-  }
+  dotsContainer.innerHTML = "";
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Testimonial ${i+1}`);
+    dot.addEventListener("click", () => setActive(i));
+    dotsContainer.appendChild(dot);
+  });
 
-  function nextSlide(){
-    index++;
-    if(index >= slides.length) index = 0;
-    updateSlider();
-  }
-
-  createDots();
-  updateSlider();
-
-  setInterval(nextSlide, 6000);
+  setActive(0);
+  setInterval(() => setActive((index + 1) % slides.length), 6500);
 })();

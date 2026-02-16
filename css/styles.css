@@ -636,26 +636,52 @@ footer{
 .testimonial-track{
   display:flex;
   transition:transform .6s ease;
+  will-change: transform;
 }
 
 .testimonial-slide{
-  min-width:100%;
-  padding:0 20px;
+  flex: 0 0 100%;     /* ✅ genau 1 Slide pro View */
+  min-width: 100%;    /* ✅ wichtig */
+  text-align:center;
+  padding:40px 20px 60px;
+}
+
+
+.quote-mark{
+  font-size:90px;
+  line-height:1;
+  color:var(--accent);
+  margin-bottom:20px;
+  font-weight:700;
 }
 
 .testimonial-slide blockquote{
-  font-size: clamp(22px, 3vw, 34px);
-  line-height:1.4;
-  font-weight:500;
-  letter-spacing:.2px;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight:700;
+  letter-spacing:.5px;
   margin:0;
+  text-transform:uppercase;
+}
+
+.quote-line{
+  width:120px;
+  height:4px;
+  background:var(--accent);
+  margin:40px auto 30px;
 }
 
 .testimonial-author{
-  margin-top:30px;
-  font-size:14px;
-  color:var(--muted);
+  font-size:16px;
+  font-weight:600;
   letter-spacing:.3px;
+}
+
+.testimonial-author span{
+  display:block;
+  margin-top:6px;
+  font-size:13px;
+  color:var(--muted);
+  font-weight:400;
 }
 
 .testimonial-dots{
@@ -678,3 +704,51 @@ footer{
   background:var(--accent);
   border-color:var(--accent);
 }
+
+/* Typo animation */
+
+.testimonial-slide blockquote,
+.testimonial-slide .testimonial-author{
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+
+.testimonial-slide.is-active blockquote,
+.testimonial-slide.is-active .testimonial-author{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* optional: author leicht verzögert */
+.testimonial-slide .testimonial-author{
+  transition-delay: .08s;
+}
+.testimonial-slide.is-active .testimonial-author{
+  transition-delay: .08s;
+}
+
+
+/* UPCOMING EVENTS */
+
+.upcoming-section{ margin-top: 110px; text-align:center; }
+.upcoming-list{
+  list-style:none;
+  padding:0;
+  margin: 26px auto 0;
+  max-width: 720px;
+  display:grid;
+  gap: 12px;
+}
+.upcoming-list li{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  background: rgba(0,0,0,.22);
+  backdrop-filter: blur(10px);
+}
+.upcoming-where{ color: var(--muted); }
+.upcoming-loading{ justify-content:center; color: var(--muted); }
