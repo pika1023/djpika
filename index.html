@@ -12,22 +12,52 @@
   <div class="noise" aria-hidden="true"></div>
 
   <div class="wrap">
-    <header class="site-header" id="siteHeader">
+    
+  <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
-    <a class="brand" href="/" aria-label="Zur Startseite">
+    <a class="brand" href="index.html" aria-label="Zur Startseite">
       <img class="logo" src="assets/Logo-Entwurf.png" alt="DJ Pika Logo">
       <span class="brand-text">DJ PIKA</span>
     </a>
 
-    <nav class="nav">
-      <a class="nav-link" href="#events">Events</a>
-      <a class="nav-link" href="#sound">Sound</a>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#contact">Kontakt</a>
-      <a class="btn primary" href="#contact">Jetzt anfragen</a>
-    </nav>
+    <div class="header-actions">
+      <a class="btn primary header-cta" href="#contact">Jetzt anfragen</a>
+
+      <button class="burger" id="burgerBtn" type="button"
+        aria-label="Menü öffnen" aria-expanded="false" aria-controls="menuOverlay">
+        <span class="burger-lines" aria-hidden="true"></span>
+      </button>
+    </div>
   </div>
 </header>
+
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <div class="menu-panel" role="dialog" aria-modal="true" aria-label="Navigation">
+    <button class="menu-close" id="menuClose" type="button" aria-label="Menü schließen">
+  <span class="close-lines"></span>
+</button>
+
+    <nav class="menu-nav" aria-label="Hauptnavigation">
+      <a class="menu-link" href="#events">Events</a>
+      <a class="menu-link" href="#sound">Sound</a>
+      <a class="menu-link" href="#about">About</a>
+      <a class="menu-link" href="#contact">Kontakt</a>
+    </nav>
+
+    <div class="menu-bottom">
+      <!-- Variante ohne Icon -->
+      <a class="menu-instagram" href="https://instagram.com/deejay.pika" target="_blank" rel="noopener">
+        INSTAGRAM: @DEEJAY.PIKA
+      </a>
+      <!-- Wenn du den Namen mit Leerzeichen willst:
+           INSTAGRAM: @DJ_PIKA (bitte an deinen echten Handle anpassen) -->
+    </div>
+  </div>
+</div>
+
+
 
     <main class="hero" role="main">
       <div class="hero-inner">
@@ -294,6 +324,7 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script> -->
 
+  <script src="scripts/menu.js"></script>
   <script src="scripts/sideHeader.js"></script>
   <script src="scripts/gallery.js"></script>
   <script src="scripts/testimonials.js"></script>

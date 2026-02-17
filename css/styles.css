@@ -772,3 +772,221 @@ footer{
   .upcoming-loc{ text-align:left; }
 }
 
+/* ===== Burger Navigation (Lando-Style: minimal, clean) ===== */
+
+/* Burger button */
+.burger{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  padding:0;
+}
+
+.burger-lines{
+  position:relative;
+  width:26px;
+  height:2px;
+  background:#fff;                 /* weiß */
+  border-radius:999px;
+  transition: background .2s ease, transform .25s ease;
+}
+
+.burger-lines::before,
+.burger-lines::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:26px;
+  height:2px;
+  background:#fff;                 /* weiß */
+  border-radius:999px;
+  transition: background .2s ease, transform .25s ease, top .25s ease, bottom .25s ease;
+}
+
+.burger-lines::before{ top:-8px; }
+.burger-lines::after{ bottom:-8px; }
+
+/* Hover -> gelb */
+.burger:hover .burger-lines,
+.burger:hover .burger-lines::before,
+.burger:hover .burger-lines::after{
+  background: var(--accent);
+}
+
+/* Optional: active state (X) when open */
+.burger.is-open .burger-lines{
+  background: transparent;
+}
+.burger.is-open .burger-lines::before{
+  top:0;
+  transform: rotate(45deg);
+}
+.burger.is-open .burger-lines::after{
+  bottom:0;
+  transform: rotate(-45deg);
+}
+
+/* Overlay */
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  z-index: 2000;
+  display:none;
+}
+
+.menu-overlay.is-open{ display:block; }
+
+.menu-overlay::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Panel (clean, centered/right-ish) */
+.menu-panel{
+  position:relative;
+  height:100%;
+  max-width: 520px;
+  margin-left:auto;
+
+  background: rgba(45,12,109,0.88);
+  border-left: 1px solid rgba(255,255,255,0.10);
+  box-shadow: -30px 0 90px rgba(0,0,0,0.55);
+
+  display:flex;
+  flex-direction:column;
+  padding: 22px 22px 18px;
+}
+
+/* Close */
+.menu-close{
+  align-self:flex-end;
+  width:42px;
+  height:42px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* Links */
+.menu-nav{
+  margin-top: 26px;
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+  padding: 14px 2px 0;
+}
+
+.menu-link{
+  font-size: 34px;                 /* groß & clean */
+  line-height: 1.1;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  text-decoration:none;
+  color: rgba(255,255,255,0.92);
+  transition: color .2s ease, transform .2s ease, opacity .2s ease;
+}
+
+.menu-link:hover{
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
+/* Bottom IG */
+.menu-bottom{
+  margin-top:auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.menu-instagram{
+  display:inline-block;
+  font-size: 13px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.70);
+  text-decoration:none;
+  transition: color .2s ease;
+}
+
+.menu-instagram:hover{
+  color: var(--accent);
+}
+
+/* Mobile tweaks */
+@media (max-width: 520px){
+  .menu-link{ font-size: 28px; }
+  .menu-panel{ max-width: 100%; }
+}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.header-cta{
+  white-space:nowrap;
+  margin-right:4px; /* leicht näher */
+}
+
+.menu-close{
+  align-self:flex-end;
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+  transition: color .2s ease, transform .2s ease;
+}
+
+/* Hover = gelb */
+.menu-close:hover{
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+.close-lines{
+  position:relative;
+  width:24px;
+  height:2px;
+  background:transparent;
+}
+
+.close-lines::before,
+.close-lines::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:24px;
+  height:2px;
+  background:#fff;
+  transition: background .2s ease;
+}
+
+.close-lines::before{
+  transform: rotate(45deg);
+}
+
+.close-lines::after{
+  transform: rotate(-45deg);
+}
+
+.menu-close:hover .close-lines::before,
+.menu-close:hover .close-lines::after{
+  background: var(--accent);
+}
