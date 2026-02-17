@@ -723,40 +723,52 @@ footer{
 }
 
 
-/* UPCOMING EVENTS */
+/* ===== Upcoming Events (clean list, 3 columns, thin dividers) ===== */
 
 .upcoming-section{
   margin-top: 110px;
-  text-align:center;
 }
 
-.upcoming-list{
-  list-style:none;
-  padding:0;
+.upcoming-table{
+  max-width: 900px;
   margin: 26px auto 0;
-  max-width: 760px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.upcoming-row{
   display:grid;
-  gap: 12px;
+  grid-template-columns: 220px 1fr 220px;
+  gap: 18px;
+  align-items: baseline;
+
+  padding: 14px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
-.upcoming-list li{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  gap:16px;
-  padding: 14px 16px;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 16px;
-  background: rgba(0,0,0,.22);
-  backdrop-filter: blur(10px);
-}
-
-.upcoming-where{
-  color: var(--muted);
+.upcoming-date{
+  color: rgba(255,255,255,0.86);
+  letter-spacing: .2px;
   white-space: nowrap;
 }
 
-.upcoming-loading{
-  justify-content:center;
-  color: var(--muted);
+.upcoming-title{
+  font-weight: 600;
+  letter-spacing: .2px;
 }
+
+.upcoming-loc{
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 700px){
+  .upcoming-row{
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 14px 0;
+  }
+  .upcoming-loc{ text-align:left; }
+}
+

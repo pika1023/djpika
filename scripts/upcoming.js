@@ -20,15 +20,13 @@
     "&timeMin=" + encodeURIComponent(timeMin) +
     "&maxResults=" + maxResults;
 
-  function formatDate(iso) {
-    const d = new Date(iso);
-    return d.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
-  }
-
-  function formatTime(iso) {
-    const d = new Date(iso);
-    return d.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
-  }
+  function formatDateLong(iso) {
+  const d = new Date(iso);
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = d.toLocaleDateString("de-DE", { month: "long" });
+  const year = d.getFullYear();
+  return `${day}. ${month}, ${year}`;
+}
 
   try {
     const res = await fetch(url);
@@ -36,29 +34,33 @@
     const data = await res.json();
 
     const items = (data.items || [])
-      .filter(e => e.status !== "cancelled")
-      .map(e => {
-        const start = e.start.dateTime || e.start.date; // dateTime oder all-day
-        const isAllDay = !!e.start.date && !e.start.dateTime;
+  .filter(e => e.status !== "cancelled")
+  .map(e => {
+    const start = e.start.dateTime || e.start.date;
+    return {
+      title: e.summary || "Event",
+      where: e.location || "",
+      when: formatDateLong(start)
+    };
+  });
 
-        return {
-          title: e.summary || "Event",
-          where: e.location || "",
-          when: isAllDay ? formatDate(start) : `${formatDate(start)} · ${formatTime(start)}`
-        };
-      });
+if (items.length === 0) {
+  list.innerHTML = `
+    <div class="upcoming-row">
+      <div class="upcoming-date">Keine Termine eingetragen.</div>
+      <div class="upcoming-title"></div>
+      <div class="upcoming-loc"></div>
+    </div>`;
+  return;
+}
 
-    if (items.length === 0) {
-      list.innerHTML = `<li class="upcoming-loading">Keine Termine eingetragen.</li>`;
-      return;
-    }
-
-    list.innerHTML = items.map(ev => `
-      <li>
-        <span class="upcoming-what">${ev.when} — <strong>${ev.title}</strong></span>
-        <span class="upcoming-where">${ev.where}</span>
-      </li>
-    `).join("");
+list.innerHTML = items.map(ev => `
+  <div class="upcoming-row">
+    <div class="upcoming-date">${ev.when}</div>
+    <div class="upcoming-title">${ev.title}</div>
+    <div class="upcoming-loc">${ev.where || ""}</div>
+  </div>
+`).join("");
 
   } catch (err) {
     list.innerHTML = `<li class="upcoming-loading">Termine konnten nicht geladen werden.</li>`;
