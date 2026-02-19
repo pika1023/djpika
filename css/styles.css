@@ -730,18 +730,13 @@ footer{
 }
 
 .upcoming-table{
-  max-width: 900px;
-  margin: 26px auto 0;
+  max-width: 100%;              /* ✅ statt 900px */
+  margin: 26px 0 0;             /* ✅ kein auto zentrieren nötig */
   border-top: 1px solid rgba(255,255,255,0.12);
 }
 
 .upcoming-row{
-  display:grid;
-  grid-template-columns: 220px 1fr 220px;
-  gap: 18px;
-  align-items: baseline;
-
-  padding: 14px 6px;
+  padding: 14px 0;              /* ✅ statt 14px 6px */
   border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
@@ -1000,10 +995,11 @@ footer{
 .sound-row{
   margin-top: 26px;
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  grid-template-columns: 0.6fr 2.4fr; /* ✅ links deutlich schmaler */
   gap: 22px;
-  align-items: start;
+  align-items: stretch;
 }
+
 
 /* LEFT: profile row (no box) */
 .sound-profile{
