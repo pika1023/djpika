@@ -1131,3 +1131,36 @@ footer{
     align-items: flex-start;
   }
 }
+
+
+/* ===== Contact Page ===== */
+
+.contact-section{
+  margin-top: 120px;
+}
+
+.contact-intro{
+  margin-top: 16px;
+  color: var(--muted);
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+.form-embed{
+  margin-top: 30px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.20);
+  backdrop-filter: blur(10px);
+}
+
+.form-embed iframe{
+  display:block;
+  width:100%;
+  border:0;
+}
+
+.contact-alt{
+  margin-top: 30px;
+}

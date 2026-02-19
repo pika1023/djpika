@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt – DJ PIKA</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Zur Startseite">
+        <img class="logo" src="assets/Logo%20Entwurf.png" alt="DJ Pika Logo">
+        <span class="brand-text">DJ PIKA</span>
+      </a>
+
+      <div class="header-actions">
+        <a class="btn primary header-cta" href="mailto:DEINMAIL@DOMAIN.DE?subject=Anfrage%20DJ%20PIKA">
+          Per Mail anfragen
+        </a>
+
+        <button class="burger" id="burgerBtn" type="button"
+          aria-label="Menü öffnen" aria-expanded="false" aria-controls="menuOverlay">
+          <span class="burger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BURGER MENU -->
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-panel">
+      <button class="menu-close" id="menuClose" type="button" aria-label="Menü schließen">
+        <span class="close-lines"></span>
+      </button>
+
+      <nav class="menu-nav">
+        <a class="menu-link" href="index.html#events">Events</a>
+        <a class="menu-link" href="index.html#sound">Sound</a>
+        <a class="menu-link" href="index.html#about">About</a>
+        <a class="menu-link" href="contact.html">Kontakt</a>
+      </nav>
+
+      <div class="menu-bottom">
+        <a class="menu-instagram"
+           href="https://instagram.com/deejay.pika"
+           target="_blank" rel="noopener">
+          INSTAGRAM: @DJPIKA
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <main class="wrap">
+
+    <section class="contact-section">
+      <div class="section-title">
+        <h1 class="section-title-clean">
+          <span class="accent-color">Kontakt</span>
+        </h1>
+      </div>
+
+      <p class="contact-intro">
+        Erzähl mir kurz von eurem Event – je mehr Details, desto besser kann ich euch ein passendes Angebot machen.
+      </p>
+
+      <!-- GOOGLE FORM EMBED -->
+      <div class="form-embed">
+        <iframe
+          title="DJ Pika Anfrageformular"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdWvFIrf3_kNiLLvGd7UW7pZogQMMHg0jFHjQHnA4Lvx73AIw/viewform?usp=publish-editor"
+          width="100%"
+          height="1100"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">
+          Wird geladen…
+        </iframe>
+      </div>
+
+      <div class="contact-alt">
+        <p>
+          Alternativ kannst du mir auch direkt schreiben:
+        </p>
+        <a class="btn" href="mailto:phuong.kuemmel@gmail.com">
+          Mail senden
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <!-- <footer class="wrap">
+    <span>© <span id="y"></span> DJ PIKA. All rights reserved.</span>
+    <span style="color:rgba(255,255,255,.55)">Music connects people.</span>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script> -->
+
+  <script src="js/menu.js"></script>
+  <script src="js/siteHeader.js"></script>
+
+</body>
+</html>
