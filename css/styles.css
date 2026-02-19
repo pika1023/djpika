@@ -1210,21 +1210,44 @@ body.menu-open{ overflow: hidden; }
 
 /* --- Top Button --- */
 
-.footer-top-row{
-  display:flex;
-  justify-content:flex-end;
+.site-footer{
+  margin-top: 120px;
+  background: #ffffff;
+  width: 100%;
+  padding: 70px 0 50px;
+  position: relative;   /* wichtig für absolute Positionierung */
 }
+
+/* Dreieck unabhängig vom Container */
+.footer-top{
+  position: absolute;
+  right: 30px;        /* Abstand vom Browserrand */
+  bottom: 40px;       /* vertikal feinjustieren */
+
+  font-size: 18px;
+  color: #2D0C6D;
+  text-decoration: none;
+  transition: transform .2s ease, color .2s ease;
+}
+
+.footer-top:hover{
+  transform: translateY(-4px);
+  color: var(--accent);
+}
+
 
 .footer-top{
   font-size: 18px;
   color: #2D0C6D;
   text-decoration:none;
   transition: transform .2s ease, color .2s ease;
+  opacity: 0.7;
 }
 
 .footer-top:hover{
   transform: translateY(-3px);
   color: var(--accent);
+  opacity: 1;
 }
 
 
