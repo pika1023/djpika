@@ -1155,10 +1155,10 @@ body.menu-open{ overflow: hidden; }
 /* ===== Footer ===== */
 
 .site-footer{
-  margin-top: 60px;
-  border-top: 1px solid rgba(255,255,255,0.10);
-  padding-top: 26px;
+  margin-top: 120px;
+  padding-bottom: 60px;
 }
+
 
 /* „Trennlinie“ mit Logo in der Mitte */
 .footer-divider{
@@ -1180,43 +1180,44 @@ body.menu-open{ overflow: hidden; }
 }
 
 .footer-logo{
-  height: 26px;
+  height: 1em;              /* exakt so hoch wie die aktuelle Schriftgröße */
+  max-height: 2.2rem;       /* Sicherheitsgrenze falls H2 sehr groß ist */
   width: auto;
-  opacity: 0.92;
-  filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
+  opacity: 0.9;
+  display: block;
 }
+
 
 /* Footer Fläche: off-white „glass“ (statt gold) */
 .footer-inner{
   position: relative;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 16px 18px;
+  padding: 28px 18px;
 
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: #ffffff;             /* echtes Weiß */
   border-radius: 18px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  border: none;
 
   display:flex;
   align-items:center;
-  justify-content:center; /* Text zentriert */
+  justify-content:center;
 }
+
 
 .footer-text{
   margin: 0;
-  color: rgba(255,255,255,0.72);
+  color: #2D0C6D;                  /* dein Primary Purple */
   font-size: 12px;
   letter-spacing: .3px;
-  text-align:center;
 }
+
 
 /* „Nach oben“: rechts unten im Footer, unscheinbar */
 .footer-top{
   position:absolute;
-  right: 12px;
-  bottom: 10px;
+  right: 14px;
+  bottom: 14px;
 
   width: 34px;
   height: 34px;
@@ -1225,22 +1226,20 @@ body.menu-open{ overflow: hidden; }
   display:grid;
   place-items:center;
 
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(0,0,0,0.18);
-  color: rgba(255,255,255,0.70);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: transparent;
+  color: #2D0C6D;
 
   font-size: 14px;
-  line-height: 1;
   text-decoration:none;
-
-  transition: transform .2s ease, color .2s ease, border-color .2s ease;
+  transition: transform .2s ease, color .2s ease;
 }
 
 .footer-top:hover{
-  transform: translateY(-1px);
   color: var(--accent);
-  border-color: rgba(246,206,17,0.35);
+  transform: translateY(-2px);
 }
+
 
 /* Smooth scroll */
 html{ scroll-behavior: smooth; }
