@@ -736,9 +736,13 @@ footer{
 }
 
 .upcoming-row{
-  padding: 14px 0;              /* ✅ statt 14px 6px */
+  display: grid;
+  grid-template-columns: 180px 1fr 220px;
+  gap: 14px;
+  padding: 14px 0;
   border-bottom: 1px solid rgba(255,255,255,0.10);
 }
+
 
 .upcoming-date{
   color: rgba(255,255,255,0.86);
@@ -860,18 +864,6 @@ footer{
   padding: 22px 22px 18px;
 }
 
-/* Close */
-.menu-close{
-  align-self:flex-end;
-  width:42px;
-  height:42px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.06);
-  color:#fff;
-  font-size:22px;
-  cursor:pointer;
-}
 
 /* Links */
 .menu-nav{
@@ -918,6 +910,9 @@ footer{
   color: var(--accent);
 }
 
+body.menu-open{ overflow: hidden; }
+
+
 /* Mobile tweaks */
 @media (max-width: 520px){
   .menu-link{ font-size: 28px; }
@@ -943,15 +938,11 @@ footer{
   place-items:center;
   border:0;
   background:transparent;
-  color:#fff;
-  font-size:28px;
   cursor:pointer;
-  transition: color .2s ease, transform .2s ease;
+  transition: transform .2s ease;
 }
 
-/* Hover = gelb */
 .menu-close:hover{
-  color: var(--accent);
   transform: rotate(90deg);
 }
 
@@ -973,13 +964,8 @@ footer{
   transition: background .2s ease;
 }
 
-.close-lines::before{
-  transform: rotate(45deg);
-}
-
-.close-lines::after{
-  transform: rotate(-45deg);
-}
+.close-lines::before{ transform: rotate(45deg); }
+.close-lines::after{ transform: rotate(-45deg); }
 
 .menu-close:hover .close-lines::before,
 .menu-close:hover .close-lines::after{
@@ -1164,3 +1150,5 @@ footer{
 .contact-alt{
   margin-top: 30px;
 }
+
+

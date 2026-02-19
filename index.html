@@ -12,50 +12,48 @@
   <div class="noise" aria-hidden="true"></div>
 
   <div class="wrap">
-    
-  <header class="site-header" id="siteHeader">
-  <div class="wrap header-inner">
-    <a class="brand" href="index.html" aria-label="Zur Startseite">
-      <img class="logo" src="assets/Logo-Entwurf.png" alt="DJ Pika Logo">
-      <span class="brand-text">DJ PIKA</span>
-    </a>
+    <header class="site-header" id="siteHeader">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html" aria-label="Zur Startseite">
+          <img class="logo" src="assets/Logo-Entwurf.png" alt="DJ Pika Logo">
+          <span class="brand-text">DJ PIKA</span>
+        </a>
 
-    <div class="header-actions">
-      <a class="btn primary header-cta" href="#contact">Jetzt anfragen</a>
+        <div class="header-actions">
+          <a class="btn primary header-cta" href="contact.html">Jetzt anfragen</a>
 
-      <button class="burger" id="burgerBtn" type="button"
-        aria-label="Menü öffnen" aria-expanded="false" aria-controls="menuOverlay">
-        <span class="burger-lines" aria-hidden="true"></span>
-      </button>
+          <button class="burger" id="burgerBtn" type="button"
+            aria-label="Menü öffnen" aria-expanded="false" aria-controls="menuOverlay">
+            <span class="burger-lines" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+      <div class="menu-panel" role="dialog" aria-modal="true" aria-label="Navigation">
+        <button class="menu-close" id="menuClose" type="button" aria-label="Menü schließen">
+          <span class="close-lines" aria-hidden="true"></span>
+        </button>
+
+        <nav class="menu-nav" aria-label="Hauptnavigation">
+          <a class="menu-link" href="#upcoming">Als Nächstes</a>
+          <a class="menu-link" href="#moments">Momente</a>
+          <a class="menu-link" href="#testimonials">Stimmen</a>
+          <a class="menu-link" href="#sound">Sound</a>
+          <!-- optional: erst aktivieren, wenn Section existiert -->
+          <!-- <a class="menu-link" href="#about">About</a> -->
+          <a class="menu-link" href="contact.html">Kontakt</a>
+        </nav>
+
+        <div class="menu-bottom">
+          <a class="menu-instagram" href="https://instagram.com/deejay.pika" target="_blank" rel="noopener">
+            INSTAGRAM: @DEEJAY.PIKA
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</header>
-
-
-<!-- MENU OVERLAY -->
-<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-  <div class="menu-panel" role="dialog" aria-modal="true" aria-label="Navigation">
-    <button class="menu-close" id="menuClose" type="button" aria-label="Menü schließen">
-  <span class="close-lines"></span>
-</button>
-
-    <nav class="menu-nav" aria-label="Hauptnavigation">
-      <a class="menu-link" href="#events">Events</a>
-      <a class="menu-link" href="#sound">Sound</a>
-      <a class="menu-link" href="#about">About</a>
-      <a class="menu-link" href="#contact">Kontakt</a>
-    </nav>
-
-    <div class="menu-bottom">
-      <!-- Variante ohne Icon -->
-      <a class="menu-instagram" href="https://instagram.com/deejay.pika" target="_blank" rel="noopener">
-        INSTAGRAM: @DEEJAY.PIKA
-      </a>
-    </div>
-  </div>
-</div>
-
-
 
     <main class="hero" role="main">
       <div class="hero-inner">
@@ -73,6 +71,9 @@
             <p class="sub">
               Ich bring den Beat – ihr bringt die Moves. Persönlich, nahbar und mit Gefühl für den Raum.
             </p>
+            <p class="cta-desc" style="margin-top:12px;">
+              Mein Ziel ist nie nur „ein guter Mix“. Mein Ziel ist Verbindung – Energie – Erinnerung.
+            </p>
 
             <div class="stats" aria-label="Was du erwarten kannst">
               <div class="stat">
@@ -85,20 +86,12 @@
               </div>
             </div>
           </div>
-
-          <!-- <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn primary" href="#contact">✨ Event anfragen</a>
-            <a class="btn" href="#sound">🎧 Hör rein</a>
-          </div> -->
         </div>
 
         <div class="hero-right">
           <div class="hero-image" aria-label="DJ Pika Portrait"></div>
 
-          <!-- TEXT UNTERM BILD -->
-          
-          <div class="cta-card" id="contact">
-            
+          <div class="cta-card">
             <div class="cta-copy">
               <div class="cta-title">Lass uns eure Tanzfläche zum Leben bringen</div>
               <p class="cta-desc">
@@ -106,241 +99,183 @@
               </p>
             </div>
             <div class="cta-actions">
-              <a class="btn primary" href="mailto:hello@example.com?subject=Booking%20Anfrage%20DJ%20Pika">Kontakt</a>
+              <a class="btn primary" href="contact.html">Kontakt</a>
             </div>
           </div>
+
         </div>
       </div>
     </main>
 
-
-<!-- SECTION GALLERY -->
-
+    <!-- SECTION GALLERY -->
     <section id="moments" class="moments-section">
       <div class="section-title">
         <h2 class="section-title-clean"><span class="accent-color">Momente</span>, die verbinden</h2>
       </div>
- 
-  <div class="moments-grid">
 
-    <div class="moment-card">
-      <div class="moment-media">
-        <img src="assets/Stadtfest2025_frontal.jpeg" alt="Event Stadtfest 2025 in Mannheim">
-        <video muted loop playsinline preload="metadata">
-          <source src="assets/stadtfest_mannheim_2025.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="moment-title">Stadtfest Mannheim, 2025</div>
-    </div>
+      <div class="moments-grid">
+        <div class="moment-card">
+          <div class="moment-media">
+            <img src="assets/Stadtfest2025_frontal.jpeg" alt="Event Stadtfest 2025 in Mannheim">
+            <video muted loop playsinline preload="metadata">
+              <source src="assets/stadtfest_mannheim_2025.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="moment-title">Stadtfest Mannheim, 2025</div>
+        </div>
 
         <div class="moment-card">
-      <div class="moment-media">
-        <img src="assets/VainaLoca2025.png" alt="Salsa Social">
-        <video muted loop playsinline preload="metadata">
-          <source src="assets/vainaloca_summer_2025.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="moment-title">Vaina Loca - Bachata & Salsa, 2025</div>
-    </div>
-
-    <div class="moment-card">
-      <div class="moment-media">
-        <img src="assets/VibrA_2Jahre_Phuong.jpeg" alt="VibrA: 2 Jahre Unterricht">
-        <video muted loop playsinline preload="metadata">
-          <source src="assets/Vibra_Unterricht_Test.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="moment-title">DJ Unterricht bei VibrA Mannheim, 2026</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SECTION TESTIMONIALS -->
-
-<section class="testimonials-section" id="testimonials">
-  <div class="testimonial-wrapper">
-
-    <div class="section-title">
-        <h2 class="section-title-clean"><span class="accent-color">Stimmen</span>, die bleiben</h2>
-      </div>
-
-    <div class="testimonial-slider">
-      <div class="testimonial-track" id="testimonialTrack">
-
-        <div class="testimonial-slide">
-          <div class="quote-mark">“</div>
-          <blockquote>
-            Thanks for the great music yesterday at Vaina Loca! It was amazing!
-          </blockquote>
-          <div class="quote-line"></div>
-          <div class="testimonial-author">
-            — Hamza, Vaina Loca, 2025
+          <div class="moment-media">
+            <img src="assets/VainaLoca2025.png" alt="Salsa Social">
+            <video muted loop playsinline preload="metadata">
+              <source src="assets/vainaloca_summer_2025.mp4" type="video/mp4">
+            </video>
           </div>
+          <div class="moment-title">Vaina Loca - Bachata & Salsa, 2025</div>
         </div>
 
-        <div class="testimonial-slide">
-          <div class="quote-mark">“</div>
-          <blockquote>
-            Professionell, entspannt und mit unglaublichem Gespür für den Raum.
-          </blockquote>
-          <div class="quote-line"></div>
-          <div class="testimonial-author">
-            — Corporate Event, Mannheim
+        <div class="moment-card">
+          <div class="moment-media">
+            <img src="assets/VibrA_2Jahre_Phuong.jpeg" alt="VibrA: 2 Jahre Unterricht">
+            <video muted loop playsinline preload="metadata">
+              <source src="assets/Vibra_Unterricht_Test.mp4" type="video/mp4">
+            </video>
           </div>
+          <div class="moment-title">DJ Unterricht bei VibrA Mannheim, 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TESTIMONIALS -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="testimonial-wrapper">
+        <div class="section-title">
+          <h2 class="section-title-clean"><span class="accent-color">Stimmen</span>, die bleiben</h2>
         </div>
 
-        <div class="testimonial-slide">
-          <div class="quote-mark">“</div>
-          <blockquote>
-            Perfekte Mischung aus Energie und Gefühl. Unsere Gäste waren begeistert.
-          </blockquote>
-          <div class="quote-line"></div>
-          <div class="testimonial-author">
-            — Salsa Social, Heidelberg
+        <div class="testimonial-slider">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-slide">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                Thanks for the great music yesterday at Vaina Loca! It was amazing!
+              </blockquote>
+              <div class="quote-line"></div>
+              <div class="testimonial-author">— Hamza, Vaina Loca, 2025</div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                Professionell, entspannt und mit unglaublichem Gespür für den Raum.
+              </blockquote>
+              <div class="quote-line"></div>
+              <div class="testimonial-author">— Corporate Event, Mannheim</div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                Perfekte Mischung aus Energie und Gefühl. Unsere Gäste waren begeistert.
+              </blockquote>
+              <div class="quote-line"></div>
+              <div class="testimonial-author">— Salsa Social, Heidelberg</div>
+            </div>
           </div>
+
+          <div class="testimonial-dots" id="testimonialDots"></div>
         </div>
-
       </div>
+    </section>
 
-      <div class="testimonial-dots" id="testimonialDots"></div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CTA BLOCK (direkt NACH der Testimonials-Section einfügen) -->
-<section class="cta-section" id="cta">
-  <div class="cta-inner">
-    <div class="cta-copy">
-      <h2 class="cta-title">
-        Bereit für <span class="accent-color">eure</span> Tanzfläche?
-      </h2>
-      <p class="cta-text">
-        Sag mir kurz Datum, Ort und Anlass – ich melde mich mit Verfügbarkeit und einem passenden Sound-Konzept.
-      </p>
-    </div>
-
-    <div class="cta-actions">
-      <a class="btn primary" href="#contact">Verfügbarkeit anfragen</a>
-      <!-- Alternative: direkt zum Google Formular -->
-      <!-- <a class="btn" href="https://forms.gle/DEIN_FORM_LINK" target="_blank" rel="noopener">Anfrage starten</a> -->
-    </div>
-  </div>
-</section>
-
-
-
-<!-- SECTION: SOUNDS, DIE BEWEGEN -->
-<section id="sound" class="sound-section">
-  <div class="section-title">
-    <h2 class="section-title-clean"><span class="accent-color">Sounds</span>, die bewegen</h2>
-  </div>
-
-  <div class="sound-row">
-    <!-- LEFT: Profil (clean row, kein Kasten) -->
-    <a class="sound-profile" href="https://soundcloud.com/vibra_mannheim" target="_blank" rel="noopener">
-      <img class="sound-avatar" src="assets/vibralogo.png" alt="VibrA Mannheim">
-      <div class="sound-meta">
-        <div class="sound-label">SoundCloud Profil</div>
-        <div class="sound-name">VibrA Mannheim</div>
-        <div class="sound-hint">Mehr Sets & Podcasts</div>
-      </div>
-      <span class="sound-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <!-- RIGHT: Player (minimal) -->
-    <div class="sound-player">
-      <div class="sound-label">Featured Mix</div>
-
-      <div class="sound-embed">
-        <iframe
-          title="SoundCloud Mix"
-          width="100%"
-          height="120"
-          scrolling="no"
-          frameborder="no"
-          allow="autoplay"
-          loading="lazy"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2179327839&color=%23f6ce11&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false">
-        </iframe>
-      </div>
-
-      <a class="sound-smalllink"
-         href="https://soundcloud.com/vibra_mannheim/vibra-mannheim-podcast-33-mixed-by-dj-ozan?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-         target="_blank" rel="noopener">
-        Auf SoundCloud öffnen
-      </a>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- SECTION UPCOMING EVENTS -->
-
-<section id="upcoming" class="upcoming-section">
-  <div class="section-title">
-   <h2 class="section-title-clean">Als <span class="accent-color">Nächstes</span></h2>
-  </div>
-
-  <div class="upcoming-table" id="upcomingList">
-    <div class="upcoming-row">
-      <div class="upcoming-date">Lade Termine…</div>
-      <div class="upcoming-title"></div>
-      <div class="upcoming-loc"></div>
-    </div>
-  </div>
-</section>
-
-
-<a class="btn primary" href="mailto:phuong.kuemmel@gmail.com?subject=Anfrage%20DJ%20PIKA&body=Hi%20DJ%20Pika%2C%0D%0A%0D%0AEventart%3A%20%0D%0ADatum%3A%20%0D%0AOrt%3A%20%0D%0AG%C3%A4stezahl%20ca.%3A%20%0D%0AMusikrichtung%3A%20%0D%0A%0D%0ALiebe%20Gr%C3%BC%C3%9Fe%2C%0D%0A">
-  Per E-Mail anfragen
-</a>
-
-    <!-- <section id="about">
-      <div class="section-title">Hi, ich bin <span class="accent-color">Pika</span></div>
-
-      <div class="serve">
-        <div class="stack" aria-hidden="true">
-          <div class="photo"></div>
-          <div class="photo"></div>
-          <div class="photo"></div>
-        </div>
-
-        <div class="serve-copy">
-          <div class="smallcap">Behind the Booth</div>
-          <h2>
-            Ich stehe hinter dem DJ-Pult<br/>
-            aber immer <span class="accent-color">mitten im Raum</span>
+    <!-- CTA BLOCK -->
+    <section class="cta-section" id="cta">
+      <div class="cta-inner">
+        <div class="cta-copy">
+          <h2 class="cta-title">
+            Bereit für <span class="accent-color">eure</span> Tanzfläche?
           </h2>
-          <ul>
-            <li>Ich beobachte.</li>
-            <li>Ich spüre.</li>
-            <li>Ich reagiere.</li>
-          </ul>
-          <p class="cta-desc" style="margin-top:12px;">
-            Mein Ziel ist nie nur „ein guter Mix“. Mein Ziel ist Verbindung – Energie – Erinnerung.
+          <p class="cta-text">
+            Sag mir kurz Datum, Ort und Anlass – ich melde mich mit Verfügbarkeit und einem passenden Sound-Konzept.
           </p>
         </div>
-      </div>
-    </section> -->
 
-    <!-- <footer>
-      <span>© <span id="y"></span> DJ Pika. All rights reserved.</span>
-    </footer> -->
+        <div class="cta-actions">
+          <a class="btn primary" href="contact.html">Verfügbarkeit anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: SOUND -->
+    <section id="sound" class="sound-section">
+      <div class="section-title">
+        <h2 class="section-title-clean"><span class="accent-color">Sounds</span>, die bewegen</h2>
+      </div>
+
+      <div class="sound-row">
+        <a class="sound-profile" href="https://soundcloud.com/vibra_mannheim" target="_blank" rel="noopener">
+          <img class="sound-avatar" src="assets/vibralogo.png" alt="VibrA Mannheim">
+          <div class="sound-meta">
+            <div class="sound-label">SoundCloud Profil</div>
+            <div class="sound-name">VibrA Mannheim</div>
+            <div class="sound-hint">Mehr Sets & Podcasts</div>
+          </div>
+          <span class="sound-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <div class="sound-player">
+          <div class="sound-label">Featured Mix</div>
+
+          <div class="sound-embed">
+            <iframe
+              title="SoundCloud Mix"
+              width="100%"
+              height="120"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              loading="lazy"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2179327839&color=%23f6ce11&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false">
+            </iframe>
+          </div>
+
+          <a class="sound-smalllink"
+             href="https://soundcloud.com/vibra_mannheim/vibra-mannheim-podcast-33-mixed-by-dj-ozan?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+             target="_blank" rel="noopener">
+            Auf SoundCloud öffnen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION UPCOMING EVENTS -->
+    <section id="upcoming" class="upcoming-section">
+      <div class="section-title">
+        <h2 class="section-title-clean">Als <span class="accent-color">Nächstes</span></h2>
+      </div>
+
+      <div class="upcoming-table" id="upcomingList">
+        <div class="upcoming-row">
+          <div class="upcoming-date">Lade Termine…</div>
+          <div class="upcoming-title"></div>
+          <div class="upcoming-loc"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="y"></span> Das ist erstmal nur eine Testseite.</span>
+    </footer>
   </div>
 
-  <!-- <script>
+  <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-  </script> -->
+  </script>
 
-  <script src="scripts/menu.js"></script>
-  <script src="scripts/sideHeader.js"></script>
-  <script src="scripts/gallery.js"></script>
-  <script src="scripts/testimonials.js"></script>
-  <script src="scripts/upcoming.js"></script>
-
+  <script src="js/menu.js"></script>
+  <script src="js/siteHeader.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/testimonials.js"></script>
+  <script src="js/upcoming.js"></script>
 </body>
 </html>
