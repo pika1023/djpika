@@ -1152,3 +1152,95 @@ body.menu-open{ overflow: hidden; }
 }
 
 
+/* ===== Footer ===== */
+
+.site-footer{
+  margin-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  padding-top: 26px;
+}
+
+/* „Trennlinie“ mit Logo in der Mitte */
+.footer-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 14px;
+  margin: 0 auto 18px;
+  max-width: var(--max);
+  padding: 0 18px;
+}
+
+.footer-divider::before,
+.footer-divider::after{
+  content:"";
+  height: 1px;
+  flex: 1;
+  background: rgba(255,255,255,0.16);
+}
+
+.footer-logo{
+  height: 26px;
+  width: auto;
+  opacity: 0.92;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
+}
+
+/* Footer Fläche: off-white „glass“ (statt gold) */
+.footer-inner{
+  position: relative;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 16px 18px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display:flex;
+  align-items:center;
+  justify-content:center; /* Text zentriert */
+}
+
+.footer-text{
+  margin: 0;
+  color: rgba(255,255,255,0.72);
+  font-size: 12px;
+  letter-spacing: .3px;
+  text-align:center;
+}
+
+/* „Nach oben“: rechts unten im Footer, unscheinbar */
+.footer-top{
+  position:absolute;
+  right: 12px;
+  bottom: 10px;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+
+  display:grid;
+  place-items:center;
+
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.18);
+  color: rgba(255,255,255,0.70);
+
+  font-size: 14px;
+  line-height: 1;
+  text-decoration:none;
+
+  transition: transform .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.footer-top:hover{
+  transform: translateY(-1px);
+  color: var(--accent);
+  border-color: rgba(246,206,17,0.35);
+}
+
+/* Smooth scroll */
+html{ scroll-behavior: smooth; }
