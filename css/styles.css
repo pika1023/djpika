@@ -992,7 +992,6 @@ footer{
 }
 
 
-/* ===== Sound Section: 2 cards left/right ===== */
 
 /* ===== Sound (clean split, thin lines) ===== */
 
@@ -1008,13 +1007,7 @@ footer{
 
 /* LEFT: profile row (no box) */
 .sound-profile{
-  display:flex;
-  align-items:center;
-  gap:14px;
   padding: 14px 6px;
-  text-decoration:none;
-  color: inherit;
-
   border-top: 1px solid rgba(255,255,255,0.12);
   border-bottom: 1px solid rgba(255,255,255,0.10);
 }
@@ -1068,12 +1061,9 @@ footer{
 }
 
 .sound-embed{
-  margin-top: 10px;
-  border-radius: 14px;
-  overflow:hidden;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(0,0,0,0.18);
+  flex:1; /* nimmt restliche Höhe ein */
 }
+
 
 .sound-embed iframe{
   display:block;
