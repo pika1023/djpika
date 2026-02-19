@@ -1160,73 +1160,73 @@ body.menu-open{ overflow: hidden; }
 
 /* ===== Footer ===== */
 
+/* ============================= */
+/* FULL WIDTH WHITE FOOTER      */
+/* ============================= */
+
 .site-footer{
   margin-top: 120px;
-  padding-bottom: 60px;
+
+  background: #ffffff;          /* echtes Weiß */
+  width: 100%;
+  padding: 60px 0 40px;
 }
 
-
-/* „Trennlinie“ mit Logo in der Mitte */
+/* Divider Bereich */
 .footer-divider{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap: 14px;
-  margin: 0 auto 18px;
+  gap: 28px;
+
   max-width: var(--max);
+  margin: 0 auto 40px;
   padding: 0 18px;
 }
 
 .footer-divider::before,
 .footer-divider::after{
   content:"";
-  height: 1px;
   flex: 1;
-  background: rgba(255,255,255,0.16);
+  height: 1px;
+  background: rgba(0,0,0,0.12);
 }
 
+/* Logo deutlich größer */
 .footer-logo{
-  height: 1em;              /* exakt so hoch wie die aktuelle Schriftgröße */
-  max-height: 2.2rem;       /* Sicherheitsgrenze falls H2 sehr groß ist */
+  height: 70px;     /* ca. 3x größer */
   width: auto;
-  opacity: 0.9;
-  display: block;
+  display:block;
 }
 
-
-/* Footer Fläche: off-white „glass“ (statt gold) */
+/* Textbereich */
 .footer-inner{
   position: relative;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 28px 18px;
-
-  background: #ffffff;             /* echtes Weiß */
-  border-radius: 18px;
-  border: none;
+  padding: 0 18px;
 
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
 }
-
 
 .footer-text{
   margin: 0;
-  color: #2D0C6D;                  /* dein Primary Purple */
-  font-size: 12px;
-  letter-spacing: .3px;
+  font-size: 13px;
+  letter-spacing: .4px;
+  color: #2D0C6D;   /* dein Lila */
+  text-align:center;
 }
 
-
-/* „Nach oben“: rechts unten im Footer, unscheinbar */
+/* Scroll to top Button */
 .footer-top{
   position:absolute;
-  right: 14px;
-  bottom: 14px;
+  right: 18px;
+  bottom: -6px;
 
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 999px;
 
   display:grid;
@@ -1236,14 +1236,15 @@ body.menu-open{ overflow: hidden; }
   background: transparent;
   color: #2D0C6D;
 
-  font-size: 14px;
+  font-size: 15px;
   text-decoration:none;
+
   transition: transform .2s ease, color .2s ease;
 }
 
 .footer-top:hover{
-  color: var(--accent);
   transform: translateY(-2px);
+  color: var(--accent);
 }
 
 
