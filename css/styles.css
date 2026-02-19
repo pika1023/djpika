@@ -994,108 +994,88 @@ footer{
 
 /* ===== Sound Section: 2 cards left/right ===== */
 
-.sound-section{
-  margin-top: 110px;
-}
+/* ===== Sound (clean split, thin lines) ===== */
 
-.sound-grid{
+.sound-section{ margin-top: 110px; }
+
+.sound-row{
   margin-top: 26px;
-  display:grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 18px;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 22px;
+  align-items: start;
 }
 
-.sound-card{
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.22);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 24px 70px rgba(0,0,0,.35);
-  overflow:hidden;
-}
-
-/* LEFT profile card */
+/* LEFT: profile row (no box) */
 .sound-profile{
   display:flex;
-  flex-direction:column;
-  padding: 16px;
+  align-items:center;
+  gap:14px;
+  padding: 14px 6px;
   text-decoration:none;
   color: inherit;
-  transition: transform .2s ease, border-color .2s ease;
+
+  border-top: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
-.sound-profile:hover{
-  transform: translateY(-2px);
-  border-color: rgba(246,206,17,.45);
-}
-
-.sound-profile-top{
-  display:flex;
-  gap: 14px;
-  align-items:center;
-}
+.sound-profile:hover .sound-name{ color: var(--accent); }
+.sound-profile:hover .sound-arrow{ color: var(--accent); transform: translateX(2px); }
 
 .sound-avatar{
-  width:64px;
-  height:64px;
-  border-radius: 16px;
-  object-fit: cover;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
+  width:56px;
+  height:56px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+
+  object-fit: contain;      /* ✅ nicht mehr abschneiden */
+  padding: 6px;             /* ✅ “Rahmen” innen */
+  box-sizing: border-box;
 }
 
-.sound-kicker{
+.sound-meta{ display:flex; flex-direction:column; gap:4px; }
+
+.sound-label{
   font-size: 12px;
   letter-spacing: .8px;
   text-transform: uppercase;
-  color: rgba(255,255,255,.70);
+  color: rgba(255,255,255,0.70);
 }
 
-.sound-title{
-  margin-top: 6px;
+.sound-name{
   font-weight: 800;
   letter-spacing: .2px;
   text-transform: uppercase;
+  transition: color .2s ease;
 }
 
-.sound-sub{
-  margin-top: 8px;
+.sound-hint{
   color: var(--muted);
   font-size: 13px;
-  line-height: 1.4;
-  max-width: 34ch;
 }
 
-.sound-cta{
-  margin-top: auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,.10);
-  font-weight: 700;
-  letter-spacing: .3px;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(255,255,255,.85);
+.sound-arrow{
+  margin-left:auto;
+  color: rgba(255,255,255,0.75);
+  transition: color .2s ease, transform .2s ease;
 }
 
-/* RIGHT embed card */
+/* RIGHT: player area (clean, no heavy box) */
+.sound-player{
+  padding: 14px 0 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
 .sound-embed{
-  padding: 16px;
-}
-
-.sound-iframe-wrap{
-  margin-top: 12px;
-  border-radius: 16px;
+  margin-top: 10px;
+  border-radius: 14px;
   overflow:hidden;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.18);
 }
 
-.sound-iframe-wrap iframe{
+.sound-embed iframe{
   display:block;
   width:100%;
   border:0;
@@ -1107,18 +1087,15 @@ footer{
   font-size: 12px;
   letter-spacing: .6px;
   text-transform: uppercase;
-  color: rgba(255,255,255,.70);
+  color: rgba(255,255,255,0.70);
   text-decoration:none;
   transition: color .2s ease;
 }
 
-.sound-smalllink:hover{
-  color: var(--accent);
-}
+.sound-smalllink:hover{ color: var(--accent); }
 
 /* Responsive */
 @media (max-width: 980px){
-  .sound-grid{
-    grid-template-columns: 1fr;
-  }
+  .sound-row{ grid-template-columns: 1fr; }
+  .sound-player{ border-top: 1px solid rgba(255,255,255,0.12); }
 }
