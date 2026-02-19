@@ -1085,3 +1085,49 @@ footer{
   .sound-row{ grid-template-columns: 1fr; }
   .sound-player{ border-top: 1px solid rgba(255,255,255,0.12); }
 }
+
+
+/* ===== CTA Block (after testimonials) ===== */
+.cta-section{
+  margin-top: 90px;
+}
+
+.cta-inner{
+  border-top: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  padding: 34px 0;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap: 22px;
+}
+
+.cta-title{
+  margin:0;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height:1.05;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+}
+
+.cta-text{
+  margin: 10px 0 0;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.5;
+}
+
+.cta-actions{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px){
+  .cta-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
