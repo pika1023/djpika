@@ -27,14 +27,19 @@ body{
   overflow-x:hidden;
 }
 
-/* Optional: Titles use Kagitingan */
-h1,h2,h3{
-  font-family: "Kagitingan", serif;
+/* Optional: Titles use Satisfy */
+h1{
+  font-family: "Satisfy", system-ui;
+}
+
+/* Optional: Titles use Cinzel */
+h2,h3{
+  font-family: "Cinzel", system-ui;
 }
 
 /* Accent text uses Satisfy (decorative) */
 .accent{
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", system-ui;
   color: var(--accent);
 }
 
@@ -245,7 +250,6 @@ h1{
   font-size: clamp(40px, 6vw, 72px);
   line-height: .95;
   letter-spacing: -1.2px;
-  text-transform: uppercase;
 }
 
 /* If you want the “Agency” part in gold but still Kagitingan, keep accent class for color only:
@@ -260,7 +264,6 @@ h1{
   max-width: 46ch;
   font-size: 13px;
   letter-spacing:.2px;
-  text-transform: uppercase;
 }
 
 .stats{
@@ -284,6 +287,7 @@ h1{
   font-size: 28px;
   font-weight: 800;
   letter-spacing:-.5px;
+  text-transform: uppercase;
 }
 
 .stat .lbl{
@@ -341,7 +345,7 @@ h1{
 .cta-title{
   font-weight:800;
   letter-spacing:.2px;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 12px;
   color: rgba(255,255,255,.85);
 }
@@ -1101,7 +1105,6 @@ body.menu-open{ overflow: hidden; }
   font-size: clamp(26px, 3.2vw, 40px);
   line-height:1.05;
   letter-spacing: .4px;
-  text-transform: uppercase;
 }
 
 .cta-text{
