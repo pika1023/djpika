@@ -43,7 +43,7 @@ h2,h3{
 /* Accent text uses Satisfy (decorative) */
 .accent{
   font-family: "Satisfy", system-ui;
-  color: var(--accent);
+  color: var(--accent-gold);
 }
 
 /* Background glow (purple+gold scheme) */
@@ -109,7 +109,7 @@ a{ color:inherit; text-decoration:none; }
 .site-header.is-compact .header-inner{
   padding: 10px 18px;
 
-  background: rgba(45,12,109,0.55);
+  background:rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
@@ -259,7 +259,7 @@ h1{
    Option A (as-is): <span class="accent">Agency</span> will switch to Satisfy.
    Option B: use class "accent-color" instead in HTML and keep Kagitingan.
 */
-.accent-color{ color: var(--accent); }
+.accent-color{ color: var(--accent-gold); }
 
 .sub{
   margin: 6px 0 0;
@@ -365,6 +365,7 @@ h1{
   gap:10px;
   align-items:center;
   justify-content:flex-end;
+  
 }
 
 .hero-image{
@@ -421,7 +422,7 @@ section{ margin-top: 26px; }
 
 .svc .idx{
   font-weight:900;
-  color: var(--accent);
+  color: var(--accent-gold);
   letter-spacing:-.5px;
   font-size: 18px;
   font-family: "Roboto Condensed", sans-serif;
@@ -496,7 +497,7 @@ section{ margin-top: 26px; }
 }
 
 .smallcap{
-  color: var(--accent);
+  color: var(--accent-gold);
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: .8px;
@@ -527,7 +528,7 @@ section{ margin-top: 26px; }
 }
 
 .serve-copy li .accent{
-  color: var(--accent);
+  color: var(--accent-gold);
   font-weight:900;
 }
 
@@ -653,7 +654,7 @@ footer{
 .quote-mark{
   font-size:90px;
   line-height:1;
-  color:var(--accent);
+  color:var(--accent-purple);
   margin-bottom:20px;
   font-weight:700;
 }
@@ -669,7 +670,7 @@ footer{
 .quote-line{
   width:120px;
   height:4px;
-  background:var(--accent);
+  background:var(--accent-purple);
   margin:40px auto 30px;
 }
 
@@ -704,8 +705,8 @@ footer{
 }
 
 .testimonial-dots button.active{
-  background:var(--accent);
-  border-color:var(--accent);
+  background:var(--accent-purple);
+  border-color:var(--accent-purple);
 }
 
 /* Typo animation */
@@ -823,7 +824,7 @@ footer{
 .burger:hover .burger-lines,
 .burger:hover .burger-lines::before,
 .burger:hover .burger-lines::after{
-  background: var(--accent);
+  background: var(--accent-gold);
 }
 
 /* Optional: active state (X) when open */
@@ -865,7 +866,7 @@ footer{
   max-width: 520px;
   margin-left:auto;
 
-  background: rgba(45,12,109,0.88);
+  background: #141418;
   border-left: 1px solid rgba(255,255,255,0.10);
   box-shadow: -30px 0 90px rgba(0,0,0,0.55);
 
@@ -895,7 +896,7 @@ footer{
 }
 
 .menu-link:hover{
-  color: var(--accent);
+  color: var(--accent-gold);
   transform: translateX(2px);
 }
 
@@ -917,7 +918,7 @@ footer{
 }
 
 .menu-instagram:hover{
-  color: var(--accent);
+  color: var(--accent-gold);
 }
 
 body.menu-open{ overflow: hidden; }
@@ -979,7 +980,7 @@ body.menu-open{ overflow: hidden; }
 
 .menu-close:hover .close-lines::before,
 .menu-close:hover .close-lines::after{
-  background: var(--accent);
+  background: var(--accent-gold);
 }
 
 
@@ -1007,8 +1008,8 @@ body.menu-open{ overflow: hidden; }
   border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
-.sound-profile:hover .sound-name{ color: var(--accent); }
-.sound-profile:hover .sound-arrow{ color: var(--accent); transform: translateX(2px); }
+.sound-profile:hover .sound-name{ color: var(--accent-gold); }
+.sound-profile:hover .sound-arrow{ color: var(--accent-gold); transform: translateX(2px); }
 
 .sound-avatar{
   width:56px;
@@ -1077,7 +1078,7 @@ body.menu-open{ overflow: hidden; }
   transition: color .2s ease;
 }
 
-.sound-smalllink:hover{ color: var(--accent); }
+.sound-smalllink:hover{ color: var(--accent-gold); }
 
 /* Responsive */
 @media (max-width: 980px){
@@ -1239,7 +1240,7 @@ body.menu-open{ overflow: hidden; }
 
 .footer-top:hover{
   transform: translateY(-4px);
-  color: var(--accent);
+  color: var(--accent-purple);
 }
 
 
@@ -1253,7 +1254,7 @@ body.menu-open{ overflow: hidden; }
 
 .footer-top:hover{
   transform: translateY(-3px);
-  color: var(--accent);
+  color: var(--accent-purple);
   opacity: 1;
 }
 
